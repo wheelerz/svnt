@@ -44,11 +44,11 @@ if __name__ == "__main__":
                     sys.exit()
                 else :
                     #print data
-                    sys.stdout.write(data)
+                    sys.stdout.write(svnt_decode(data))
                     prompt()
              
             #user entered a message
             else :
-                msg = sys.stdin.readline()
+                msg = svnt_encode(sys.stdin.readline())
                 s.send(msg)
                 prompt()
